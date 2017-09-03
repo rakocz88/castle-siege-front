@@ -1,3 +1,16 @@
 div.container{
 	margin-top: 10px;
 }
+.input-error{
+	color:red;
+}
+.input-success{
+	color: green;
+}
+.show-active{
+	background-color: blue;
+}
+.strike{
+	background-color: blue;
+	color : green;
+}

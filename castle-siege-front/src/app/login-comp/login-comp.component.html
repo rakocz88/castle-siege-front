@@ -1,8 +1,39 @@
+<div>
+	<button [class]='buttonClass' (click)='changeButtonColor()'>
+		Something</button>
+	<p appColored>dupa {{deleted}}</p>
+	<p [ngClass]="{strike: deleted}">Map
+		Syntax Example</p>
+	<label> <input type="checkbox" (change)="deleted = !deleted" [ngModel]="deleted">
+		deleted (apply "strike" class)
+	</label><br>
+	<div class="container">
+		<p ng-class="{active: show-active}">This is the corect login form</p>
+		<input [(ngModel)]="hero.login" type="text" class="" /> <input
+			[(ngModel)]="hero.password" type="password" />
+		<button (click)="invoke()">Click me</button>
+		<a routerLink="/cardlist">Go to </a>
+		<router-outlet></router-outlet>
+	</div>
+	
+	<select [(ngModel)]="textSelected">
+		<option *ngFor="let selected of selectinos" [ngValue] = "selected" > {{selected}} </option>
+	</select>
+	
+	<div [ngSwitch]=textSelected>
+		<p *ngSwitchCase="'text1'">Text 1 </p>
+		<p *ngSwitchCase="'text2'">Text 2 </p>
+		<p *ngSwitchCase="'text3'">Text 3 </p>
+	</div>
+	
+	<input [(ngModel)]="sometext" type="text" #some />
+	<button (click) = "clickButton2(some)" >Clickit</button>
 
-<div class = "container">
-	<p> {{title}} </p>
-	<p [innerText] = info></p>
-  <app-input></app-input>
-  <app-input></app-input>
-  <p *ngFor="let user of allUsers">{{user}}</p>
+	<!-- <div class="container">
+		<p>{{title}}</p>
+		<p [innerText]=info></p>
+		<app-input></app-input>
+		<app-input></app-input>
+		<p *ngFor="let user of allUsers">{{user}}</p>
+	</div> -->
 </div>

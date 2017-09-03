@@ -1,13 +1,14 @@
-import {Component, OnInit} from '@angular/core';
-import {LoginUser} from './login.user';
-import {Route, Router} from '@angular/router';
+import { LoginUser } from './login.user';
+import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-login-comp',
-  templateUrl: './login-comp.component.html',
-  styleUrls: ['./login-comp.component.css']
+  selector: 'app-playground',
+  templateUrl: './playground.component.html',
+  styleUrls: ['./playground.component.css']
 })
-export class LoginCompComponent implements OnInit {
+export class PlaygroundComponent implements OnInit {
+
   hero: LoginUser;
   title: string;
   info: string;
@@ -52,7 +53,5 @@ export class LoginCompComponent implements OnInit {
   clickButton2(some) {
     console.log(some);
   }
-
-
 
 }
